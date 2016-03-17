@@ -1,0 +1,26 @@
+{
+  "name": "snfcEndPoints",
+  "version": "0.0.2",
+  "description": "SNFC related microservices.",
+  "engines": {
+    "arangodb": "^2.8.0"
+  },
+  "author": "Rich B",
+  "license": "Apache 2",
+  "controllers": {
+    "/foodservice": "controllers/app_controller.js",
+    "/ingredients": "controllers/ingredients.js",
+    "/recipes": "controllers/recipes.js",
+    "/edges": "controllers/edges.js"
+  },
+  "scripts": {
+    "setup": "scripts/setup.js",
+    "teardown": "scripts/teardown.js"
+  },
+  "dependencies": {
+    "auth": "util_simple_auth:^2.0.0",
+    "sessions": "util_sessions_local:^2.0.0",
+    "users": "util_users_local:^3.0.0"
+  },
+  "tests": "test/**/*.js"
+}
