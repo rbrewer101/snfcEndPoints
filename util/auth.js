@@ -16,11 +16,11 @@ function createUser(credentials) {
 function login(credentials, reqsession, errorstatus) {
 	// Get username from users collection.
     var user = users.resolve(credentials.get('username'));
-    //console.log("\n", "reqsession: ", reqsession, "\n");
+    console.log("\n", "user.get('authData').simple: ", user.get('authData').simple, "\n");
 
     // Verify that session password matches user's stored password.
     var valid = auth.verifyPassword(
-        user ? user.get('authData').simple : {},
+        user ? user.get('userData').simple : {},
         credentials.get('password'));
     try {
         if (!valid) {
