@@ -17,12 +17,17 @@ Install the applications listed in manifest.json in order to meet user and sessi
 app-path = /home/webdev/src/
 ```
  - Restart arango
- - Install dependencies listed in manifest.json (use mount points from manifest.json)
+ - Install dependencies listed in manifest.json (use mount points from manifest.json):
+ ```
+/util_simple_auth
+/util_sessions_local
+/util_users_local
+ ```
  - Install application. For example:
 ```
 foxx-manager install /home/webdev/src/ /snfcEndPoints --server.endpoint tcp://10.12.4.205:8529 --server.database snfc
 ```
- 5. In gui - dependencies (blocks icon in service), enter dependencies manually in the form
+ - In gui - dependencies (blocks icon in service), enter dependencies manually in the form
 ```
 util_simple_auth  
 util_sessions_local
